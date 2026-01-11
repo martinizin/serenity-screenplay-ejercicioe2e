@@ -1,4 +1,4 @@
-# Ejercicio E2E SauceDemo - Serenity BDD & Screenplay
+# Ejercicio E2E - Serenity BDD con Screenplay
 
 El siguiente ejercicio corresponde a una prueba de automatización End-to-End para validar el flujo de compra en el sitio SwagLabs (SauceDemo), implementando el patrón de diseño Screenplay.
 
