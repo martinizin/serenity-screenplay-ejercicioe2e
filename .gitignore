@@ -1,0 +1,31 @@
+# --- Gradle ---
+.gradle/
+build/
+# Ignorar log de errores de Gradle
+gradle-app.setting
+!gradle-wrapper.jar
+
+# --- Serenity BDD Reports ---
+# CRITICO: Serenity suele generar reportes aquí, no queremos subir evidencias al repo
+target/
+*.log
+
+# --- IntelliJ IDEA ---
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# --- Eclipse (Por si alguien más usa Eclipse) ---
+.classpath
+.project
+.settings/
+bin/
+
+# --- VS Code ---
+.vscode/
+
+# --- Sistema Operativo ---
+.DS_Store
+Thumbs.db

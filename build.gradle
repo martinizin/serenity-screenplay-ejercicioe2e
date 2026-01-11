@@ -1,0 +1,50 @@
+plugins {
+    id 'java'
+    id 'idea'
+    // Usamos esta versión porque la 3.6.23 NO existe como plugin descargable,
+    // pero abajo forzamos las librerías 3.6.23 que tú quieres.
+    id "net.serenity-bdd.serenity-gradle-plugin" version "4.0.15"
+}
+
+defaultTasks 'clean', 'test', 'aggregate'
+
+group 'com.nttdata'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+// Configuración de codificación
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+dependencies {
+
+    implementation "net.serenity-bdd:serenity-core:4.0.15"
+    implementation "net.serenity-bdd:serenity-screenplay:4.0.15"
+    implementation "net.serenity-bdd:serenity-screenplay-webdriver:4.0.15"
+    implementation "net.serenity-bdd:serenity-ensure:4.0.15"
+
+
+    testImplementation "net.serenity-bdd:serenity-cucumber:4.0.15"
+    testImplementation "junit:junit:4.13.2"
+    testImplementation "org.assertj:assertj-core:3.24.2"
+    testImplementation "org.hamcrest:hamcrest:2.2"
+    compileOnly 'org.projectlombok:lombok:1.18.30'
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
+    testImplementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
+    implementation "ch.qos.logback:logback-classic:1.2.11"
+}
+
+test {
+    useJUnit()
+    testLogging.showStandardStreams = true
+    systemProperties System.getProperties()
+    systemProperty "file.encoding", "utf-8"
+}
+
+wrapper {
+    gradleVersion = '7.6.1'
+}
