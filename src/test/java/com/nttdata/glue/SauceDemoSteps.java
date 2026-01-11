@@ -33,6 +33,7 @@ public class SauceDemoSteps {
 
     @Given("que cargue los datos de prueba del json")
     public void loadData() throws IOException {
+
         data = DataLoads.data().get(0);
     }
 
