@@ -38,3 +38,12 @@ Tras la ejecución exitosa ("BUILD SUCCESSFUL"), los reportes se encuentran en:
 ## Datos de Prueba
 Siguiendo las instrucciones, externalicé los datos (credenciales, productos y dirección) en un archivo JSON ubicado en:
 `src/test/resources/data/data.json`.
+## Reporte de Prueba
+<img width="1899" height="1079" alt="image" src="https://github.com/user-attachments/assets/010b893c-3fb0-49f2-8c7c-c8f145b0bb89" />
+
+<img width="1898" height="1079" alt="image" src="https://github.com/user-attachments/assets/5cddded6-87c9-4f22-8e99-07dd811a1f0f" />
+
+<img width="1895" height="1052" alt="image" src="https://github.com/user-attachments/assets/c0062edc-0192-463e-9165-d0ee54a77d5f" />
+
+<img width="1898" height="1079" alt="image" src="https://github.com/user-attachments/assets/a887fdb6-e65d-4855-b87a-58aa8566f468" />
+
