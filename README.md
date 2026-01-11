@@ -18,13 +18,17 @@ Para la realización de este ejercicio, utilicé la siguiente configuración:
 
 1.  **Clonar el proyecto** o descargar el código fuente.
 2.  **Abrir una terminal** en la carpeta raíz del proyecto.
-3.  **Ejecutar el comando** de Gradle. Es vital usar 'clean' para limpiar el driver cacheado y 'aggregate' para generar el reporte visual:
+3.  **Ejecutar el comando** de Gradle. Es vital usar `clean` para limpiar el driver cacheado y `aggregate` para generar el reporte visual.
 
-    En Windows (PowerShell/CMD):
-    gradlew clean test aggregate
-
-    En Mac/Linux:
+    **En Windows (PowerShell / CMD):**
+    ```powershell
     ./gradlew clean test aggregate
+    ```
+
+    **En Mac / Linux:**
+    ```bash
+    ./gradlew clean test aggregate
+    ```
 
 4.  El navegador se abrirá automáticamente, realizará el login, la compra y validará el mensaje final.
 
@@ -32,12 +36,12 @@ Para la realización de este ejercicio, utilicé la siguiente configuración:
 Tras la ejecución exitosa ("BUILD SUCCESSFUL"), los reportes se encuentran en:
 
 * **Reporte Serenity (Recomendado):** `<raíz_proyecto>/target/site/serenity/index.html`
-    * Incluye capturas de pantalla paso a paso de cada interacción
+    * Incluye capturas de pantalla paso a paso de cada interacción.
 * **Reporte Cucumber:** `<raíz_proyecto>/target/cucumber/report.html`
 
 ## Datos de Prueba
 Siguiendo las instrucciones, externalicé los datos (credenciales, productos y dirección) en un archivo JSON ubicado en:
-`src/test/resources/data/data.json`.
+`src/test/resources/data/data.json`
 ## Reporte de Prueba
 <img width="1899" height="1079" alt="image" src="https://github.com/user-attachments/assets/010b893c-3fb0-49f2-8c7c-c8f145b0bb89" />
 
