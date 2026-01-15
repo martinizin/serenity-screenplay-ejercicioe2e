@@ -1,10 +1,12 @@
-Feature: Compra E2E en SauceDemo
+Feature: Funcionalidad de compra en SauceDemo
 
   @SauceDemo
-  Scenario: Compra exitosa con datos desde JSON
-    Given que cargue los datos de prueba del json
-    And que estoy en la pagina de login
-    When ingreso mis credenciales desde el archivo
-    And agrego los items al carrito
-    And completo el formulario de compra
-    Then deberia ver el mensaje de exito "THANK YOU FOR YOUR ORDER!"
+  Scenario Outline: Completar el flujo de compra end-to-end
+    Given que el usuario accede a la tienda virtual SwagLabs
+    When ingresa credenciales validas usuario "<usuario>" y clave "<clave>"
+    And agrega al carrito los productos "<producto1>" y "<producto2>"
+    And completo el formulario de compra con nombre "<nombre>", apellido "<apellido>" y zip "<zip>"
+    Then valida que se muestre el mensaje de confirmación "<mensaje>"
+    Examples:
+      | usuario       | clave        | producto1           | producto2             | nombre | apellido | zip   | mensaje                   |
+      | standard_user | secret_sauce | Sauce Labs Backpack | Sauce Labs Bike Light | Martin | Jimenez  | 17011 | Thank you for your order! |
