@@ -4,6 +4,7 @@ Uno de los hallazgos técnicos más curiosos fue el conflicto entre la versión 
 
 Otro reto interesante fue una alerta nativa de seguridad de Google ("Password Leak Detection") que bloqueaba la automatización tras el login. Logré evadirla inyectando argumentos específicos en el archivo `serenity.conf`, tales como `--disable-features=PasswordLeakDetection` y `--disable-save-password-bubble`.
 
-Considero que también implemente una mejora en la prueba reemplazando XPaths absolutos por IDs dinámicos como se sugiere en el workshp en la capa de UserInterface y externalicé los datos a un JSON, logrando una ejecución robusta y mantenible.
+Considero que también implementé una mejora en la prueba reemplazando XPaths absolutos por IDs dinámicos como se sugiere en el workshop en la capa de UserInterface, en cuanto al diseño de la prueba, me pareció muy eficiente trabajar con el enfoque de "Scenario Outline". Descubrí que definir los datos directamente en la tabla de ejemplos del archivo Gherkin hace que el escenario sea mucho más legible y transparente para el negocio, además de que simplifica técnicamente el código al inyectar los valores como parámetros directos en los pasos sin necesidad de lógica extra de carga de datos.
+
 
 Finalmente, a diferencia de otros reportes estándar que solo indican "Pass/Fail", noté que al usar el patrón Screenplay correctamente  (con Stepdefinitions y Tasks nombrados), el reporte HTML final actúa como una "evidencia auditora" detallada. Esto elimina la brecha entre el código y el cliente, ya que cada captura de pantalla corresponde a una intención del usuario y no solo a una línea de código.
